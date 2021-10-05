@@ -38,7 +38,7 @@ jobs:
       - 
         name: Install opensfm
         run: |
-          apt install libeigen3-dev \
+          sudo apt install libeigen3-dev \
               libopencv-dev \
               libceres-dev \
               python3-dev \
