@@ -1,0 +1,37 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths-ignore:
+      - '**/*.md'
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    env:
+      SOME_VAR: "SOME_VALUE"
+
+    steps:
+      -
+        name: Checkout repository
+        uses: actions/checkout@v2
+        with: 
+          submodules: recursive
+      -
+        name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          architecture: x64
+      -
+        name: Test cd
+        run: |
+          cd somefolder
+          python3 module.py
+      - 
+        name: Test after cd
+        run: |
+          python3 main.py
