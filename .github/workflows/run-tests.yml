@@ -51,7 +51,7 @@ jobs:
               curl
           cd libs/opensfm
           git checkout 7d1878460116fd5b8c5083f676b02524470af282
-          pip3 install --no-deps -r requirements.txt
+          pip3 install --use-deprecated=legacy-resolver -r requirements.txt
           python3 setup.py build
           python3 setup.py install
       -
