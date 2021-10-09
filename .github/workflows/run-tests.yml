@@ -15,7 +15,7 @@ jobs:
       SOME_VAR: "SOME_VALUE"
 
     container:
-      image: vsvasya/opensfm
+      image: vsvasya/baseimage-cpu
     steps:
       -
         name: Checkout repository
