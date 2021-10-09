@@ -33,5 +33,5 @@ jobs:
           python3 -c "import opensfm"
       - name: opensfm sample test
         run: |
-          cd libs/opensfm
+          cd /build/OpenSfM
           bin/opensfm_run_all data/berlin
