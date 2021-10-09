@@ -17,11 +17,21 @@ jobs:
     container:
       image: vsvasya/opensfm
     steps:
+      -
+        name: Checkout repository
+        uses: actions/checkout@v2
+        with: 
+          submodules: recursive
+      -
+        name: Install our dependencies
+        run: |
+          pip3 install poetry wheel
+          poetry install
       - 
         name: dummy test
         run: |
           python3 -c "import opensfm"
       - name: opensfm sample test
         run: |
-          cd /build/OpenSfM
+          cd libs/opensfm
           bin/opensfm_run_all data/berlin
