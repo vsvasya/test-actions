@@ -22,11 +22,11 @@ jobs:
         uses: actions/checkout@v2
         with: 
           submodules: recursive
-      -
-        name: Install our dependencies
-        run: |
-          pip3 install poetry wheel
-          poetry install
+      # -
+      #   name: Install our dependencies
+      #   run: |
+      #     pip3 install poetry wheel
+      #     poetry install
       - 
         name: dummy test
         run: |
