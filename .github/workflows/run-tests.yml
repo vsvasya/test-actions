@@ -34,7 +34,7 @@ jobs:
       - name: currentdir
         run: |
           echo $(pwd)
-      - name: opensfm sample test
-        run: |
-          cd /build/OpenSfM
-          bin/opensfm_run_all data/berlin
+      # - name: opensfm sample test
+      #   run: |
+      #     cd /build/OpenSfM
+      #     bin/opensfm_run_all data/berlin
