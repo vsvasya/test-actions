@@ -1,5 +1,7 @@
 [tool.poetry]
 name = "test-actions"
+description = ""
+authors = []
 version = "0.1.0"
 
 [tool.poetry.dependencies]
