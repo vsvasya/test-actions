@@ -21,3 +21,7 @@ jobs:
         name: dummy test
         run: |
           python3 -c "import opensfm"
+      - name: opensfm sample test
+        run: |
+          cd /build/OpenSfM
+          bin/opensfm_run_all data/berlin
